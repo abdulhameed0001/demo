@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHub - Premium Smartphones & Accessories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        dark: '#1f2937',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 50%, #3b82f6 100%);
+        }
+        .phone-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .phone-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .category-btn {
+            transition: all 0.3s ease;
+        }
+        .category-btn:hover {
+            transform: scale(1.05);
+            background-color: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold text-primary">TechHub</span>
+                        <span class="text-sm text-gray-600">Phones</span>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#featured" class="text-gray-700 hover:text-primary px-3 py-2 font-medium">Featured</a>
+                        <a href="#categories" class="text-gray-700 hover:text-primary px-3 py-2 font-medium">Categories</a>
+                        <a href="#latest" class="text-gray-700 hover:text-primary px-3 py-2 font-medium">Latest</a>
+                        <a href="#accessories" class="text-gray-700 hover:text-primary px-3 py-2 font-medium">Accessories</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 text-gray-600 hover:text-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="p-2 text-gray-600 hover:text-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute top-2 right-2 bg-primary text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">3</span>
+                    </button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Next Generation Smartphones</h1>
+                    <p class="text-xl mb-8 opacity-90">Discover cutting-edge technology with our premium collection of smartphones. Experience innovation like never before.</p>
+                    <div class="flex space-x-4">
+                        <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
+                            Shop Now
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/83fa292e-458c-4d86-ab04-6a35102b1587.png" alt="Premium smartphone with sleek design and advanced camera system displayed against dark background" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-4 -right-4 bg-white text-primary p-4 rounded-lg shadow-lg">
+                        <div class="text-2xl font-bold">From $699</div>
+                        <div class="text-sm">Limited Time Offer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Phones -->
+    <section id="featured" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Smartphones</h2>
+                <p class="text-xl text-gray-600">Handpicked selection of our most popular devices</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Phone 1 -->
+                <div class="phone-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                    <div class="mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b0788eea-9949-4808-8759-1d26598a8e5d.png" alt="Flagship smartphone with triple camera setup and premium aluminum frame in midnight black" class="w-full h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Ultra Pro Max</h3>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">4.8 (256 reviews)</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold text-primary">$999</span>
+                        <span class="text-gray-500 line-through ml-2">$1199</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
+                        <li>• 6.7" Super AMOLED Display</li>
+                        <li>• Triple 108MP Camera System</li>
+                        <li>• 12GB RAM + 256GB Storage</li>
+                        <li>• 5000mAh Battery</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Phone 2 -->
+                <div class="phone-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                    <div class="mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f5999199-bccd-467c-b0b8-5c6728e18d70.png" alt="Slim minimalist smartphone with edge-to-edge display and ceramic white finish" class="w-full h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Lite Edition</h3>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">4.9 (189 reviews)</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold text-primary">$699</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
+                        <li>• 6.4" Fluid Display</li>
+                        <li>• Dual 64MP Camera</li>
+                        <li>• 8GB RAM + 128GB Storage</li>
+                        <li>• 4500mAh Fast Charging</li>
+                        <li>• IP68 Water Resistance</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Phone 3 -->
+                <div class="phone-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                    <div class="mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a3711376-b29d-40b9-b64b-69fc607fa127.png" alt="Gaming smartphone with RGB lighting and aggressive design in cosmic purple" class="w-full h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">GameMaster Pro</h3>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">4.7 (312 reviews)</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold text-primary">$899</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
+                        <li>• 6.8" 144Hz Gaming Display</li>
+                        <li>• 16GB RAM + 512GB Storage</li>
+                        <li>• 6000mAh Battery</li>
+                        <li>• Liquid Cooling System</li>
+                        <li>• 4D Vibration Feedback</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Browse Categories</h2>
+                <p class="text-xl text-gray-600">Find the perfect device for your needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="category-btn bg-white rounded-xl p-6 text-center shadow-md cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-crown text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Flagship</h3>
+                    <p class="text-sm text-gray-600">Premium performance</p>
+                </div>
+
+                <div class="category-btn bg-white rounded-xl p-6 text-center shadow-md cursor-pointer">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-balance-scale text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Mid-Range</h3>
+                    <p class="text-sm text-gray-600">Best value</p>
+                </div>
+
+                <div class="category-btn bg-white rounded-xl p-6 text-center shadow-md cursor-pointer">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wallet text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Budget</h3>
+                    <p class="text-sm text-gray-600">Affordable options</p>
+                </div>
+
+                <div class="category-btn bg-white rounded-xl p-6 text-center shadow-md cursor-pointer">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headphones text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Accessories</h3>
+                    <p class="text-sm text-gray-600">Complete your setup</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Phones -->
+    <section id="latest" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Latest Arrivals</h2>
+                <p class="text-xl text-gray-600">Brand new models just arrived</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Latest Phone 1 -->
+                <div class="phone-card bg-white rounded-xl p-4 shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/14e1cf5b-741a-41a2-8cac-254418870f82.png" alt="Newly released foldable smartphone with dual screen and premium hinge mechanism" class="w-full h-40 object-contain mb-4">
+                    <h3 class="font-semibold text-gray-900 mb-2">Fold Pro</h3>
+                    <div class="text-primary font-bold mb-2">$1299</div>
+                    <button class="w-full bg-gray-100 text-gray-700 py-2 rounded text-sm hover:bg-primary hover:text-white">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Latest Phone 2 -->
+                <div class="phone-card bg-white rounded-xl p-4 shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b0878de8-5da8-45a4-87f7-4a0636b772d4.png" alt="Compact smartphone with vibrant color options and minimalist bezel design" class="w-full h-40 object-contain mb-4">
+                    <h3 class="font-semibold text-gray-900 mb-2">Mini S</h3>
+                    <div class="text-primary font-bold mb-2">$549</div>
+                    <button class="w-full bg-gray-100 text-gray-700 py-2 rounded text-sm hover:bg-primary hover:text-white">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Latest Phone 3 -->
+                <div class="phone-card bg-white rounded-xl p-4 shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5bbf60a-b456-4d65-a33f-1cfe1d8f509a.png" alt="Rugged smartphone with military-grade protection and outdoor-ready design" class="w-full h-40 object-contain mb-4">
+                    <h3 class="font-semibold text-gray-900 mb-2">Adventure X</h3>
+                    <div class="text-primary font-bold mb-2">$799</div>
+                    <button class="w-full bg-gray-100 text-gray-700 py-2 rounded text-sm hover:bg-primary hover:text-white">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Latest Phone 4 -->
+                <div class="phone-card bg-white rounded-xl p-4 shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ac7ad5cd-286d-4af8-bb71-72ebccce75f4.png" alt="Ultra-slim smartphone with carbon fiber construction and professional aesthetics" class="w-full h-40 object-contain mb-4">
+                    <h3 class="font-semibold text-gray-900 mb-2">Executive Pro</h3>
+                    <div class="text-primary font-bold mb-2">$949</div>
+                    <button class="w-full bg-gray-100 text-gray-700 py-2 rounded text-sm hover:bg-primary hover:text-white">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories -->
+    <section id="accessories" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Premium Accessories</h2>
+                <p class="text-xl text-gray-600">Enhance your mobile experience</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d1f3d115-a393-42db-bc45-ea6c7bd2b789.png" alt="Wireless charging station with multiple device support and LED indicators" class="w-full h-40 object-contain mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Wireless Charger Pro</h3>
+                    <p class="text-gray-600 mb-4">Fast wireless charging for multiple devices</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-xl">$79</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-secondary">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/289bc56a-568a-47c0-a3d5-ef37d16686df.png" alt="Premium Bluetooth earbuds with noise cancellation and charging case" class="w-full h-40 object-contain mb-4">
+                    <h3 class="text-xl font-semibold mb-2">SoundBuds Pro</h3>
+                    <p class="text-gray-600 mb-4">Crystal clear audio with active noise cancellation</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-xl">$129</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-secondary">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ed9f52ac-0856-4a13-bc04-73a6648b8bdd.png" alt="Protective phone case with military-grade drop protection and sleek design" class="w-full h-40 object-contain mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Armor Case</h3>
+                    <p class="text-gray-600 mb-4">Military-grade protection meets stylish design</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-xl">$49</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-secondary">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TechHub Phones</h3>
+                    <p class="text-gray-400">Your trusted partner for premium smartphones and accessories.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Shop</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Smartphones</a></li>
+                        <li><a href="#" class="hover:text-white">Accessories</a></li>
+                        <li><a href="#" class="hover:text-white">Deals</a></li>
+                        <li><a href="#" class="hover:text-white">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">Shipping</a></li>
+                        <li><a href="#" class="hover:text-white">Returns</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe for latest updates and offers</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l bg-gray-700 text-white w-full">
+                        <button class="bg-primary px-4 py-2 rounded-r hover:bg-secondary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 TechHub Phones. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple cart functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('button');
+            addToCartButtons.forEach(button => {
+                if (button.textContent === 'Add to Cart') {
+                    button.addEventListener('click', function() {
+                        const productName = this.closest('.phone-card') ? 
+                            this.closest('.phone-card').querySelector('h3').textContent : 
+                            this.closest('.bg-white').querySelector('h3').textContent;
+                        
+                        alert(`Added ${productName} to your cart!`);
+                        
+                        // Update cart count (simplified)
+                        const cartCount = document.querySelector('.bg-primary.text-white');
+                        if (cartCount) {
+                            const currentCount = parseInt(cartCount.textContent);
+                            cartCount.textContent = currentCount + 1;
+                        }
+                    });
+                }
+            });
+
+            // Category buttons hover effect
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            categoryButtons.forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        icon.classList.add('text-white');
+                    }
+                });
+                btn.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        const colorClass = Array.from(icon.classList).find(cls => cls.startsWith('text-') && cls !== 'text-white' && cls !== 'text-2xl');
+                        icon.classList.remove('text-white');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
